@@ -1,7 +1,3 @@
-# 目的
-为了处理设置视图frame时引起的像素对齐问题（Color Misaligned Images）
-<br>并减少调整后的frame的误差
-
 # 介绍
 调整逻辑像素，让它转换成物理像素时能够得到整数，达到像素对齐。以减少GPU渲染时的额外开销。
 <br>让调整后的值 更接近 调整前的值，相差不超过 1 / [[UIScreen mainScreen].scale]

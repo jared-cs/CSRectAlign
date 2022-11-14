@@ -16,8 +16,13 @@
 <br>UILabel *label = [UILabel new];
 <br>label.text = @"你吃了么.nn";
 <br>CGRect rect  = CGRectMake(100.9, 100.4, 93.2, 21.4);
-<br>// 二、调用CGRectAlignPixel
+
+<br>// 二、调用CGRectAlignPixel调整frame
 <br>label.frame = CGRectAlignPixel(rect);
 <br>// 或者 label.frame = rect;
 <br>//      [label alignFrame];
 <br>[self.view addSubview:label];
+
+<br>三、调用CGSizeCeilPixel调整size
+<br>CGSize labelSize = [label.text boundingRectWithSize:CGSizeMake(1000, 100) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:label.font} context:nil].size;
+<br>labelSize = CGSizeCeilPixel(labelSize);

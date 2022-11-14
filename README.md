@@ -10,13 +10,14 @@
 <br>如果使用系统的CGRectIntegral   (100,    100,    95,    22)     误差最大能超过 1
 
 # 使用方式
-
-#import "UIView+CSRectAlign.h"
+// 一、导入头文件
+<br>#import "UIView+CSRectAlign.h"
 <br>
 <br>UILabel *label = [UILabel new];
 <br>label.text = @"你吃了么.nn";
 <br>CGRect rect  = CGRectMake(100.9, 100.4, 93.2, 21.4);
+<br>// 二、调用CGRectAlignPixel
 <br>label.frame = CGRectAlignPixel(rect);
 <br>// 或者 label.frame = rect;
-<br>//     [label alignFrame];
+<br>//      [label alignFrame];
 <br>[self.view addSubview:label];

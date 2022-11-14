@@ -23,6 +23,6 @@
 <br>//      [label alignFrame];
 <br>[self.view addSubview:label];
 
-<br>三、调用CGSizeCeilPixel调整size
+<br>//三、调用CGSizeCeilPixel调整size
 <br>CGSize labelSize = [label.text boundingRectWithSize:CGSizeMake(1000, 100) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:label.font} context:nil].size;
 <br>labelSize = CGSizeCeilPixel(labelSize);

@@ -28,11 +28,16 @@
 //    [label alignFrame];
     [self.view addSubview:label];
 
+//     CGSize labelSize = [label.text boundingRectWithSize:CGSizeMake(1000, 100) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:label.font} context:nil].size;
+//     labelSize = CGSizeCeilPixel(labelSize);
+    
     NSLog(@"\norigin = %@, \nalgin = %@, \nfloor-ceil = %@, \nIntegral = %@",
           NSStringFromCGRect(rect),
           NSStringFromCGRect(rect1),
           NSStringFromCGRect(rect2),
           NSStringFromCGRect(rect3));
+    
+
 }
 
 @end
